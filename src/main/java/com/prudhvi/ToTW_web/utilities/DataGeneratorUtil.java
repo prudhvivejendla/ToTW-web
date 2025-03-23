@@ -1,5 +1,6 @@
-package com.prudhvi.ToTW_web.utility;
+package com.prudhvi.ToTW_web.utilities;
 
+import com.prudhvi.ToTW_web.domain.Cuisine;
 import com.prudhvi.ToTW_web.domain.Recipe;
 import com.prudhvi.ToTW_web.domain.Author;
 import org.springframework.stereotype.Component;
@@ -42,5 +43,12 @@ public class DataGeneratorUtil {
         recipe.setDescription(generateRandomString(new Random().nextInt(20) + 20));
         recipe.setCategory(generateRandomString(new Random().nextInt(5) + 5));
         return recipe;
+    }
+
+    public static Cuisine generateRandomCuisine() {
+        Cuisine cuisine = new Cuisine();
+        cuisine.setDescription(generateRandomString(new Random().nextInt(10) + 20));
+        cuisine.setName(generateRandomString(new Random().nextInt(5) + 5));
+        return cuisine;
     }
 }

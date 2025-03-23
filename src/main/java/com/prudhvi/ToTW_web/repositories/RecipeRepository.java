@@ -1,4 +1,4 @@
-package com.prudhvi.ToTW_web.repository;
+package com.prudhvi.ToTW_web.repositories;
 
 import com.prudhvi.ToTW_web.domain.Recipe;
 import org.springframework.data.repository.CrudRepository;

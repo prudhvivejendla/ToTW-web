@@ -22,6 +22,9 @@ public class Recipe {
             inverseJoinColumns = @JoinColumn(name = "user_id"))
     private Set<Author> authors;
 
+    @ManyToOne (fetch = FetchType.LAZY)
+    private Cuisine cuisine;
+
     public Recipe() {
     }
 
@@ -86,6 +89,15 @@ public class Recipe {
             authors = new HashSet<>();
         }
         authors.add(user);
+        return this;
+    }
+
+    public Cuisine getCuisine() {
+        return cuisine;
+    }
+
+    public Recipe setCuisine(Cuisine cuisine) {
+        this.cuisine = cuisine;
         return this;
     }
 
